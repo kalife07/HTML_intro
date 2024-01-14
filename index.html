@@ -4,6 +4,17 @@
     <!--Cela est un commentaire-->
     <!--Ici on met tous les imports ex: js, css, bibliotheque etc-->
     <title>Mon premier sitweb</title> <!--Nom de l'onglet de page web-->
+    <style>
+        .styleDivs{
+            background-color: red;
+            color:aquamarine;
+            border: 2px solid black;
+            margin:10px;
+        }
+        .mainClass{
+            text-align:center;
+        }
+    </style>
 </head> 
 <body>
     <!--Tag Paragraphe-->
@@ -160,6 +171,23 @@
                 <li>souris</li>
                 <li>ecran</li>
             </ul>
+        </div>
+        <p style="border: 1px solid black">Bonjour le Monde</p>
+        <div style="border: 1px solid black">Bonjour le Monde</div>
+            <p>Les éléments P et DIV sont tous deux des éléments de bloc, et ils commenceront toujours sur une nouvelle ligne et occuperont toute la largeur disponible (s'étendent vers la gauche et la droite autant qu'ils le peuvent).</p>
+        <!--Les classes-->
+        <!--Les classes sont pour denoter des tags div qui correspondent a un meme stylesheet-->
+        <div class="styleDivs mainClass">
+            <h1>Hiver</h1>
+        </div>
+        <div class="styleDivs">
+            <h1>Printemps</h1>
+        </div>
+        <div class="styleDivs">
+            <h1>Été</h1>
+        </div>
+        <div class="styleDivs">
+            <h1>Automne</h1>
         </div>
 </body>  
 </html>

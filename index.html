@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="index.css">
     <!--Cela est un commentaire-->
     <!--Ici on met tous les imports ex: js, css, bibliotheque etc-->
     <title>Mon premier sitweb</title> <!--Nom de l'onglet de page web-->
@@ -13,6 +14,10 @@
         }
         .mainClass{
             text-align:center;
+        }
+        #monId{
+            color:purple;
+            background-color:plum;
         }
     </style>
 </head> 
@@ -174,7 +179,7 @@
         </div>
         <p style="border: 1px solid black">Bonjour le Monde</p>
         <div style="border: 1px solid black">Bonjour le Monde</div>
-            <p>Les éléments P et DIV sont tous deux des éléments de bloc, et ils commenceront toujours sur une nouvelle ligne et occuperont toute la largeur disponible (s'étendent vers la gauche et la droite autant qu'ils le peuvent).</p>
+            <p classe="externe">Les éléments P et DIV sont tous deux des éléments de bloc, et ils commenceront toujours sur une nouvelle ligne et occuperont toute la largeur disponible (s'étendent vers la gauche et la droite autant qu'ils le peuvent).</p>
         <!--Les classes-->
         <!--Les classes sont pour denoter des tags div qui correspondent a un meme stylesheet-->
         <div class="styleDivs mainClass">
@@ -189,5 +194,104 @@
         <div class="styleDivs">
             <h1>Automne</h1>
         </div>
+    <!--Le id: donne un identifiant UNIQUE a le <>-->
+    <div id="monId">
+        Cest seulement une!!
+    </div>
+
+    <!--Iframe:Mettre un site web dans mon site-->
+    <iframe src="https://uxdworld.com/2022/11/24/design-tip20-use-multi-step-forms-to-manage-information/" height="100%" width="100%"></iframe>
+    
+    <!--Caracteres spéciales-->
+    <!--Espace-->
+    <h2> Exemple: Adel&nbsp;Khalife</h2>
+    <!--Plus petit que-->
+    <p>2 &lt; 5</p>
+    <!--Plus grand que-->
+    <p>5 &gt; 2</p>
+    <!--Symbole And-->
+    <p> Les cours de pgrammation consistent de C++ &amp; HTML</p>
+    <!--Apostrophe-->
+    <p>C&apos;est la vie</p>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Symbole</th>
+            <th>Pays</th>
+        </tr>
+        <tr>
+            <td>cent</td>
+            <td>&cent;</td>
+            <td>USA</td>
+        </tr>
+        <tr>
+            <td>pound</td>
+            <td>&pound;</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>yen</td>
+            <td>&yen;</td>
+            <td>Japan</td>
+        </tr>
+        <tr>
+            <td>euro</td>
+            <td>&euro;</td>
+            <td>Europe</td>
+        </tr>
+        <tr>
+            <td>lebanese pound</td>
+            <td>L&pound;</td>
+            <td>Lebanon</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Symbole</th>
+        </tr>
+        <tr>
+            <td>Copyright</td>
+            <td>&copy;</td>
+        </tr>
+        <tr>
+            <td>Trademark</td>
+            <td>&reg;</td>
+        </tr>
+    </table>
+    <!--Les accents-->
+    <!--Accent grave-->
+    <h3>Je vais a&#768; la maison</h3>
+    <!--Accent aigu-->
+    <h3>Ma saison pre&#769;fe&#769;re&#769;e est e&#769;te&#769;</h3>
+    <!--Accent circonflexe-->
+    <h3>peut-e&#770;tre</h3>
+
+    <!--Les emojis-->
+    <!--Sourires-->
+    <h3>Sourire 1: &#128512;</h3>
+    <h3>Sourire 2: &#128513;</h3>
+    <h3>Sourire 3: &#128516;</h3>
+    <h3>Sourire 4: &#128515;</h3>
+    <!--Rires-->
+    <h3>Rire 1: &#128514;</h3>
+    <h3>Rire 2: &#128517;</h3>
+
+    <!--Les Formulaires-->
+    <!--Cela est utilisé pour la collection des donnes utilisateurs dans un site web-->
+    <form>
+        <label for="adel">Prénom:</label>
+        <br>
+        <input type="text" name="adel" value="Adel">
+        <br>
+        <br>
+        <label for="adel">Password:</label>
+        <br>
+        <input type="password" name="adel" value="Adel">
+
+    </form>
+    
 </body>  
 </html>

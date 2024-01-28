@@ -282,6 +282,9 @@
     <!--Les Formulaires-->
     <!--Cela est utilisé pour la collection des donnes utilisateurs dans un site web-->
     <form>
+        <fieldset>
+        <legend>Form Soummettre Nom</legend>
+        <!-- on peut avoir <form action="lien fichier .js">-->
         <label for="adel">Prénom:</label>
         <br>
         <input type="text" name="adel" value="Adel">
@@ -290,8 +293,82 @@
         <label for="adel">Password:</label>
         <br>
         <input type="password" name="adel" value="Adel">
+        <br>
+        <label for="adel">Checkbox:</label>
+        <br>
+        <input type="checkbox">
+        <label for="adel">Adel</label>
 
+        <!-- Choix Radio-->
+        <h1>C'est quoi ton language favori?</h1>
+        <input type="radio" id="python" name="language_favori" value="Python">
+        <label for="python">Python</label>
+        <br>
+        <input type="radio" id="c++" name="language_favori" value="C++">
+        <label for="c++">C++</label>
+        <br>
+        <input type="radio" id="css" name="language_favori" value="CSS">
+        <label for="css">CSS</label>
+        <br>
+        <input type="radio" id="html" name="language_favori" value="HTML">
+        <label for="html">HTML</label>
+        <br>
+
+        <!--Les Boutons-->
+        <input type="button" value="Clicker sur moi">
+
+        <!--Bouton Submit le form avec l'information-->
+        <input type="submit" value="Submit">
+
+        <!--Une autre facon de faire les boutons-->
+        <button type="button" onclick="alert('Bonjour!')">Click</button>
+
+        <!--Dropdown HTML-->
+        <br>
+        <select id="saisons" name="saisons">
+            <option value="hiver">Hiver</option>
+            <option value="printemps">Printemps</option>
+            <option value="été" selected>Été</option>
+            <option value="automne">Automne</option>
+        </select>
+
+        <br>
+        <p>Quels ingredients dans un gateau?</p>
+        <select id="ingredients" name="ingredient" multiple>
+            <option value="oeufs">Oeufs</option>
+            <option value="sucre">Sucre</option>
+            <option value="lait" selected>Lait</option>
+            <option value="farine">Farine</option>
+        </select>
+
+        <!--Text area-->
+        <br>
+        <textarea name="message" rows ="20" cols="40">
+            Cela est un exemple d'une boite de texte.
+        </textarea>
+
+    </fieldset>
     </form>
-    
+    <!--Les shapes en HTML-->
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+    </svg>
+    <svg width="400" height="100">
+          <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+        </svg>
+
+    <svg width="300" height="200">
+         <polygon points="100,10 40,198 190,78 10,78 160,198"
+          style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+
+    <!--Multimedia HTML-->
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/8hxQ4nheTGg"
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
 </body>  
 </html>

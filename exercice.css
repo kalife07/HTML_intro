@@ -1,0 +1,45 @@
+body{
+    /*background-color: aliceblue;*/
+    background-image: url("chien.png");
+}
+
+.mainStyle{
+    background-color: red;
+    opacity:0.5;
+    color: white;
+    border: 10px dotted blueviolet;
+    /*border-color: blueviolet;*/
+    margin-top: 75px;
+    margin-left: 20px;
+    margin-right: 75px;
+    margin-bottom: 100px;
+}
+
+.mainStyle2{
+    background-color: #87CEEB;
+    border: 5px solid #636363;
+    /*padding-top: 30px;
+    padding-bottom: 70px;
+    padding-right: 100px;
+    padding-left: 10px;*/
+    padding: 30px 100px 10px 70px;
+    height: 200px;
+    width: 50%;
+    color: green;
+}
+
+.listStyle{
+    text-decoration-line: line-through;
+}
+
+.listStyle2{
+    text-decoration-line: underline;
+}
+
+.listStyle3{
+    text-decoration-line: overline;
+}
+
+.listStyle4{
+    text-decoration-line: overline underline;
+}

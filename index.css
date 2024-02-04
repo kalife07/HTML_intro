@@ -1,5 +1,5 @@
 body{
-    background-color: red;
+    background-color: red;/*left,right*/
 }
 
 h1{
@@ -8,8 +8,13 @@ h1{
 
 p{
     background-color:blueviolet;
+    text-align:right;
 }
 
 .externe{
     color:white;
+}
+
+h2.externe{
+    background-color:bisque;
 }

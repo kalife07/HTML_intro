@@ -17,7 +17,8 @@ body{
 
 .mainStyle2{
     background-color: #87CEEB;
-    border: 5px solid #636363;
+    border: 5px solid #636363; /*cela est une bordure*/
+    border-radius: 20px;
     /*padding-top: 30px;
     padding-bottom: 70px;
     padding-right: 100px;
@@ -42,4 +43,35 @@ body{
 
 .listStyle4{
     text-decoration-line: overline underline;
+}
+
+.divTest{
+    background-color: green;
+    border: 10px;
+    color: white;
+    margin: 100px;
+    height: 200px;
+    width: 50%;
+    outline-style: dotted;
+
+}
+
+p.p1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 30px;
+}
+
+p.p2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+p.p2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.icons{
+    background-color: orange;
 }

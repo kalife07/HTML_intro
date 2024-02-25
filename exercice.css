@@ -75,3 +75,116 @@ p.p2{
 .icons{
     background-color: orange;
 }
+
+a{
+    color:hotpink;
+    text-decoration: none;
+    background-color: blueviolet;
+}
+
+a:link{
+    color:red;
+    text-decoration: none;
+}
+
+a:visited{
+    color:blue;
+    text-decoration: none;
+    background-color:aquamarine;
+}
+
+a:hover{
+    color:orange;
+    text-decoration: underline;
+    background-color: deeppink;
+}
+
+a:active{
+    color:white;
+}
+
+a:hover.insta{
+    color:bisque;
+    text-decoration:dashed;
+}
+
+a:link.insta{
+    padding:50px;
+    margin:200px;
+    color:aqua;
+    background-color: blueviolet;
+    border-radius: 20px;
+}
+
+ol.cssclasse{
+    list-style-type: square;
+}
+
+ol.cssclasse2{
+    list-style-type: circle;
+}
+
+ol.cssclasse3{
+    list-style-type: upper-roman;
+}
+
+ol.cssclasse4{
+    list-style-type: lower-alpha;
+}
+
+.listDiv{
+    background-color:orange;
+    border: solid 10px yellow;
+    color:white;
+    margin-top:100px;
+
+}
+
+li {
+    background: #ffe5e5;
+    color: darkred;
+    padding: 5px;
+    margin-left: 35px;
+  }
+
+th, td {
+    border: 1px solid;
+    height:70px;
+    text-align:left;
+    vertical-align: bottom;
+  }
+
+.tableDiv{
+    background-color: pink;
+}
+
+table {
+    width: 100%;
+    border:1px solid;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:hover {background-color: coral;}
+
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+  th {
+    background-color: palevioletred;
+    color: white;
+  }

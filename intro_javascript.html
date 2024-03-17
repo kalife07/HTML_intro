@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <button type="button" onclick="document.getElementById('datetime').innerHTML = Date() ">
+        La Date et le temps maintenant
+    </button>
+    <button type="button" onclick="document.getElementById('stpatrick').style.color = 'green' ">
+        Click me i'm irish today
+    </button>
+    <button type="button" onclick="document.getElementById('noel').style.display = 'none' ">
+        Update current holiday
+    </button>
+</head>
+<body>
+
+    <h1>Hello, World!</h1>
+    <script>
+        // Le code JavaScript va etre ici
+        /* commentaire multiligne
+           javascript
+        */
+        // pop-up en JavaScript
+        //alert('Hello world!');
+        function maFonction(){
+        // pop-up en JavaScript
+            alert('Hello world!');
+        }
+        document.write("hey");
+        document.write(10+10*(1+7));
+
+        // Numeros : Avec ou pas de decimals
+        document.write(10); // integer
+        document.write(10.5); // decimal
+        document.write('Single Quote'); // single quote
+        document.write("Double Quote"); // double quote
+
+        let t = 2;
+        document.write(2);
+        let nom =  "Khalife";
+        let prenom = "Adel";
+
+        document.write(nom + " " + prenom);
+
+        // les variables
+        let x,y,z; // var peut etre utilisé
+        // const - >variable ocnstante
+        x = 5;
+        y = 7;
+        z = x + y;
+        document.write(z);
+
+        var a,b,c;
+        a = 12;
+        b = a + 2;
+        c = a;
+        // c'est quoi la valeur de c maintenant
+        document.write(c);
+
+        
+
+
+
+    </script>
+    <p id="datetime"></p>
+    <p id="stpatrick">Happy St Patrick's Day!</p>
+    <p id="noel">Merry Christmas!</p>
+    <button type="button" onclick="maFonction()">
+        rouler la fonction
+    </button>
+</body>
+</html>

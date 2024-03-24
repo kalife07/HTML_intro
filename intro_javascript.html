@@ -13,6 +13,7 @@
     <button type="button" onclick="document.getElementById('noel').style.display = 'none' ">
         Update current holiday
     </button>
+    <div id="div1"></div>
 </head>
 <body>
 
@@ -48,9 +49,9 @@
         let x,y,z; // var peut etre utilisé
         // const - >variable ocnstante
         x = 5;
-        y = 7;
-        z = x + y;
-        document.write(z);
+        //y = 7;
+        //z = x + y;
+        //document.write(z);
 
         var a,b,c;
         a = 12;
@@ -59,9 +60,90 @@
         // c'est quoi la valeur de c maintenant
         document.write(c);
 
+        // Assignment operator
+        tt = 2
+        tt = tt+2
+        document.write('\n');
+        document.write(tt);
+        document.write('\n');
+        document.write('<br>');
+        let person = "Adel K", carName = "Volvo", price = 400;
+        let p;
+        document.write(p);
+        let combinaison = person + " " + carName + " "  + price;
+        document.write('<br>',combinaison)
+
+        // questions examens techniques
+        let k = "5" + 2 + 9 
+        //Question: C'est quoi la valeure de k?
+        // Quand tu a un numero en string + des numeros integers, 
+        // le code est automatiquement convertit en string
+        // alors k = "529"
+
+        let h = 2 + 9 + "5"
+        // Quand les numeros integers sont en avant, cela convertit les
+        // premiers deux integers dans une somme (11) et le 5 va apparaitre
+        // a la fin
+        // alors h  = "115" 
+
+        // CONST - Cela est constante et on ne le change pas.
+        try{
+            const PI = 3.1415926;
+            document.write("<br>");
+            document.write(PI);
+            PI = 3.14;
+            document.write("<br>");
+            document.write(PI);
+        }
+        catch(err){
+           // document.write(err);
+            document.getElementById("div1").innerHTML = err;
+        }
+
+        // une autre difference entre let et var
+        // let
+        function fonctionLet(){
+            let x = 10; // seulement accessible ici et les block low level 
+            if(true){
+                let y = 20; // seulement accessible dans le block de if
+                console.log(x);
+                console.log(y);
+            }
+            console.log(x);
+            console.log(y);
+            // peut pas acceder le 20 car c'est premierement declarée dans un block low level
+        }
+        // peut pas acceder le 10 car c'est dans le block de la fonction
         
+        function fonctionVar(){
+            var x = 10; // on peut accéder cette variable dans toute la fonction
+            if(true){
+                var y = 20; // on peut accèder cette variable dans toute la fonction
+                console.log(x);
+                console.log(y);
+            }
+            console.log(x);
+            console.log(y);
+        }
+        /*console.log(x);
+        console.log(y);*/ // multi line commments. Cela ne marche pas car c'est hors de la fonction
+        // mais on ne peut pas accéder a les variables x et y ici car on est dehors de la fonction.
 
+        fonctionLet();
+        fonctionVar();
 
+        // Avec le var - on peut redeclarer cela n'importre ou dans le programme
+        // Cela est seulement si on redeclare avec le var
+        var x = 5; // x est 5
+        var x = 9; // x est 9
+
+        // Avec le let - on ne peut pas redeclarer cela dans le meme block
+        // Cela est seulement si on redclare avec le let
+        let u = 2; // cela est valide
+        let u = 8; // cela est invalide
+
+        let u = 6; // cela est valide
+        var u = 5; // cela est invalide car u est déjà assigné a let u = 6;
 
     </script>
     <p id="datetime"></p>

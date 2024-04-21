@@ -11,7 +11,7 @@
 
     <h2>Mois        Jour        Année</h2>
 
-    <select id="mois" name="Annee">
+    <select id="mois1" name="Annee">
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -26,7 +26,7 @@
         <option value="12">12</option>
     </select>
 
-    <select id="jour" name="Jour">
+    <select id="jour1" name="Jour">
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -60,7 +60,7 @@
         <option value="31">31</option>
     </select>
 
-    <select id="annee" name="Annee">
+    <select id="annee1" name="Annee">
         <option value="2014">2014</option>
         <option value="2015">2015</option>
         <option value="2016">2016</option>
@@ -88,7 +88,7 @@
 
     <h2>Mois        Jour        Année</h2>
 
-    <select id="mois" name="Annee">
+    <select id="mois2" name="Annee">
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -103,7 +103,7 @@
         <option value="12">12</option>
     </select>
 
-    <select id="jour" name="Jour">
+    <select id="jour2" name="Jour">
         <option value="01">01</option>
         <option value="02">02</option>
         <option value="03">03</option>
@@ -137,7 +137,7 @@
         <option value="31">31</option>
     </select>
 
-    <select id="annee" name="Annee">
+    <select id="annee2" name="Annee">
         <option value="2014">2014</option>
         <option value="2015">2015</option>
         <option value="2016">2016</option>
@@ -163,9 +163,42 @@
 
     <br>
     <br>
-    <button>Calculer différence</button>
+    <button onclick="alert_date();">Calculer différence</button>
+
+    <div></div>
 
     <script>
+        function start_date() {
+            let mois1 = document.getElementById("mois1").value;
+            let jour1 = document.getElementById("jour1").value;
+            let annee1 = document.getElementById("annee1").value;
+            return {mois1, jour1, annee1};
+        }
+        
+        function end_date() {
+            let mois2 = document.getElementById("mois2").value;
+            let jour2 = document.getElementById("jour2").value;
+            let annee2 = document.getElementById("annee2").value;
+            return {mois2, jour2, annee2};
+        }
+
+        function alert_date() {
+            alert("Date début: "+start_date().mois1+"/"+start_date().jour1+"/"+start_date().annee1+" Date fin: "+end_date().mois2+"/"+end_date().jour2+"/"+end_date().annee2)
+        }
+
+        function transformation_date(date_debut, date_fin) {
+            const date1 = new Date(date_debut.annee+"-"+date_debut.mois+"-"+date_debut.jour);
+            let time_ms1 = date1.getTime();
+            const date2 = new Date(date_fin.annee+"-"+date_fin.mois+"-"+date_fin.jour);
+            let time_ms2 = date2.getTime();
+            let diff = time_ms1 - time_ms2;
+
+        }
+
+
+
+
+        
 
     </script>
 </body>

@@ -84,6 +84,7 @@
         <option value="2034">2034</option>
     </select>
 
+
         <h1>Sélection table fin</h1>
 
     <h2>Mois        Jour        Année</h2>
@@ -160,12 +161,19 @@
         <option value="2033">2033</option>
         <option value="2034">2034</option>
     </select>
-
+    
     <br>
     <br>
-    <button onclick="alert_date();">Calculer différence</button>
+    <button onclick="show_ms(start_date(),end_date());" id="showTextBtn">Calculer différence</button>
+    <p id="today"></p>
+    <p id="displayText"></p>
+    <p id="date1_ms"></p>
+    <p id="date2_ms"></p>
+    <p id="ms_diff"></p>
+    <p id="error_message" class="error_txt"></p>
+    <p id="tot_diff"></p>
 
-    <div></div>
+    <div id="diff"></div>
 
     <script>
         function start_date() {
@@ -182,9 +190,60 @@
             return {mois2, jour2, annee2};
         }
 
-        function alert_date() {
-            alert("Date début: "+start_date().mois1+"/"+start_date().jour1+"/"+start_date().annee1+" Date fin: "+end_date().mois2+"/"+end_date().jour2+"/"+end_date().annee2)
+        function showDate() {
+            var displayTextElement = document.getElementById("displayText");
+            displayTextElement.textContent = "Date début: "+start_date().mois1+"/"+start_date().jour1+"/"+start_date().annee1+" Date fin: "+end_date().mois2+"/"+end_date().jour2+"/"+end_date().annee2;
+            //document.write("Date début: "+start_date().mois1+"/"+start_date().jour1+"/"+start_date().annee1+" Date fin: "+end_date().mois2+"/"+end_date().jour2+"/"+end_date().annee2)
         }
+
+        function show_ms(date_debut, date_fin) {
+            console.log(date_debut.annee1);
+            const date1 = new Date(date_debut.annee1+"-"+date_debut.mois1+"-"+date_debut.jour1);
+            let time_ms1 = date1.getTime();
+            const date2 = new Date(date_fin.annee2+"-"+date_fin.mois2+"-"+date_fin.jour2);
+            let time_ms2 = date2.getTime();
+            let diff = time_ms2 - time_ms1;
+            var date1_text = document.getElementById("date1_ms");
+            var date2_text = document.getElementById("date2_ms");
+            var diff_text = document.getElementById("ms_diff");
+            var error_text = document.getElementById("error_message");
+            var displayTextElement = document.getElementById("displayText");
+            var tot_diff_txt = document.getElementById("tot_diff");
+            var diff_annee = Math.floor(diff/31536000000);
+            var diff_mois = (diff/31536000000-diff_annee)*12;
+            const millInMonth = 1000*60*60*24*30.44
+            var jours = diff_mois*30;
+            //var diff_mois = diff/millInMonth;
+            //var diff_mois = Math.abs(document.getElementById("mois1").value-document.getElementById("mois2").value);
+
+            if (diff>=0) {
+                displayTextElement.textContent = "Date début: "+start_date().mois1+"/"+start_date().jour1+"/"+start_date().annee1+" Date fin: "+end_date().mois2+"/"+end_date().jour2+"/"+end_date().annee2;
+                //date1_text.textContent = "Milliseconde 1: "+time_ms1;
+                //date2_text.textContent = "Milliseconde 2: "+time_ms2;
+                diff_text.textContent = "Difference des millisecondes: "+diff;
+                tot_diff_txt.textContent = "Anne: "+diff_annee+", Mois: "+diff_mois+", Jours: "+jours/Math.floor(diff_mois);
+                error_message.textContent = "";
+            }
+            else {
+                displayTextElement.textContent = "";
+                date1_text.textContent = "";
+                date2_text.textContent = "";
+                diff_text.textContent = "";
+                error_message.textContent = "SVP mettre une date fin apres la date debut";
+            }
+            
+        }
+
+        function set_today_date() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth()+1;
+            var day = today.getDate();
+            var formattedDate = year+"-"+(month<10 ? "0"+month:month)+"-"+(day<10 ? "0"+day:day)
+            var today_txt = document.getElementById("today");
+            today_txt.textContent = formattedDate;
+        }
+        set_date();
 
         function transformation_date(date_debut, date_fin) {
             const date1 = new Date(date_debut.annee+"-"+date_debut.mois+"-"+date_debut.jour);
@@ -193,13 +252,34 @@
             let time_ms2 = date2.getTime();
             let diff = time_ms1 - time_ms2;
 
+            let diffDiv = document.getElementById('diff').innerHTML;
         }
 
 
 
-
-        
-
     </script>
+
+    <style>
+        .error_txt{
+            color: red;
+        }
+
+        h1,h2,select,button {
+            font-family:fantasy;
+            color:maroon;
+        }
+
+        body{
+            background-color: lightcoral;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* Horizontally center the child elements */
+            align-items: center; /* Vertically center the child elements */
+            height: 100vh; /* Set the height of the container to the viewport height */
+        }
+    </style>
 </body>
 </html>

@@ -201,9 +201,18 @@
 
             const anneeDefault = document.getElementById("annee1");
             const currentYear = currentDate.getFullYear();
+            for(let i=0;i<anneeDefault.options.length;i++){
+                if(anneeDefault.options[i].value == currentYear.toString()){
+                    anneeDefault.options[i].selected = true;
+                    break;
+                }
+            }
+            /*
+            Vieux code
             anneeDefault.selectedIndex = currentYear;
             console.log(typeof anneeDefault);
             console.log(typeof currentYear);
+            */
 
             const jourDefault = document.getElementById("jour1");
             const currentDay = currentDate.getDate();
@@ -220,7 +229,12 @@
 
             const anneeFinDefault = document.getElementById("annee2");
             //const currentYear = currentDate.getFullYear();
-            anneeFinDefault.selectedIndex = currentYear;
+            for(let i=0;i<anneeFinDefault.options.length;i++){
+                if(anneeFinDefault.options[i].value == currentYear.toString()){
+                    anneeFinDefault.options[i].selected = true;
+                    break;
+                }
+            }
             /*console.log(typeof anneeDefault);
             console.log(typeof currentYear);*/
 
@@ -229,6 +243,8 @@
             jourFinDefault.selectedIndex = currentDay;
             /*console.log(typeof jourDefault);
             console.log(typeof currentDay);*/
+
+            
         }
         set_default();
         
